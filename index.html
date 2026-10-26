@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0B2E55">
+<meta name="description" content="Vanessa Puetate, abogada. Orientación jurídica en derecho de familia, civil y laboral. Atención en línea.">
+<title>Vanessa Puetate | Abogada</title>
+<style>
+:root{
+  --navy:#0B2E55;
+  --navy2:#173F6E;
+  --blue:#2F6FA8;
+  --ice:#F2F7FB;
+  --line:#D9E5EF;
+  --ink:#1E2A36;
+  --muted:#617487;
+  --white:#FFFFFF;
+  --radius:22px;
+  --shadow:0 16px 42px rgba(11,46,85,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.eyebrow{
+  margin:0 0 10px;
+  color:var(--blue);
+  font-size:.75rem;
+  font-weight:800;
+  letter-spacing:.16em;
+}
+h1,h2,h3{
+  margin-top:0;
+  color:var(--navy);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.12;
+}
+h1{font-size:clamp(2.55rem,8vw,5.1rem);letter-spacing:-.035em;margin-bottom:16px}
+h2{font-size:clamp(2rem,6vw,3rem);margin-bottom:15px}
+h3{font-size:1.28rem;margin-bottom:8px}
+p{margin-top:0}
+.btn{
+  min-height:50px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 20px;
+  border-radius:999px;
+  font-weight:800;
+  border:1px solid transparent;
+  transition:.2s ease;
+}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:var(--navy2);transform:translateY(-1px)}
+.btn-secondary{background:#fff;border-color:#AFC5D8;color:var(--navy)}
+.full{width:100%}
+
+/* Header */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(11,46,85,.08);
+}
+.nav-wrap{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.brand img{width:58px;height:58px;object-fit:contain}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  font-size:.92rem;
+  color:#40566A;
+}
+.nav a:hover{color:var(--navy)}
+.nav-cta{
+  padding:10px 15px;
+  border-radius:999px;
+  background:var(--navy);
+  color:#fff!important;
+}
+.menu-btn{
+  display:none;
+  width:44px;height:44px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+  color:var(--navy);
+  font-size:1.25rem;
+}
+
+/* Hero */
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:68px 0 62px;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(47,111,168,.12),transparent 26%),
+    linear-gradient(180deg,#fff 0%,#F8FBFE 100%);
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  right:-130px;
+  bottom:-170px;
+  width:380px;height:380px;
+  border-radius:50%;
+  border:60px solid rgba(47,111,168,.055);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.18fr .82fr;
+  gap:58px;
+  align-items:center;
+}
+.hero-copy{position:relative;z-index:2}
+.hero-sub{
+  font-size:1.18rem;
+  font-weight:700;
+  color:#315370;
+  max-width:660px;
+  margin-bottom:14px;
+}
+.hero-text{
+  max-width:680px;
+  color:var(--muted);
+  font-size:1rem;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0 20px}
+.hero-trust{display:flex;gap:18px;flex-wrap:wrap;color:#6A7C8C;font-size:.9rem}
+.hero-card{
+  position:relative;
+  z-index:2;
+  background:#fff;
+  border:1px solid #E2ECF4;
+  border-radius:30px;
+  box-shadow:var(--shadow);
+  padding:38px 34px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:390px;
+}
+.hero-card img{width:250px}
+.pills{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+.pills span{
+  background:var(--ice);
+  color:var(--navy);
+  padding:8px 11px;
+  border-radius:999px;
+  font-size:.82rem;
+  font-weight:700;
+}
+
+/* General sections */
+.section{padding:76px 0}
+.section-soft{background:#F5F9FC}
+.section-dark{background:var(--navy);color:#D7E5F0}
+.section-head{max-width:720px;margin-bottom:34px}
+.section-head p:not(.eyebrow){color:var(--muted)}
+.two-col{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.prose{color:#526779;font-size:1.03rem}
+
+/* Services */
+.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:27px;
+  box-shadow:0 10px 28px rgba(11,46,85,.055);
+}
+.service-card.featured{border-color:#AFC7DB;box-shadow:0 16px 38px rgba(11,46,85,.09)}
+.service-card ul{padding-left:18px;color:#526779;margin-bottom:0}
+.service-card li{margin:7px 0}
+.card-number{display:inline-block;margin-bottom:12px;color:#8DA9C0;font-size:.76rem;font-weight:900;letter-spacing:.12em}
+.service-strip{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.service-strip span{border:1px solid #D3E0EA;background:#fff;color:#3E5D76;border-radius:999px;padding:9px 12px;font-size:.86rem}
+
+/* Process */
+.light .eyebrow,.light h2{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{border-top:1px solid rgba(255,255,255,.24);padding-top:22px}
+.step strong{
+  width:40px;height:40px;
+  border-radius:50%;
+  display:grid;place-items:center;
+  background:#fff;color:var(--navy);
+  margin-bottom:14px;
+}
+.step h3{color:#fff}
+.step p{color:#C6D8E6}
+
+/* Payment */
+.payment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.payment-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:24px;
+}
+.pay-badge{
+  width:44px;height:44px;border-radius:13px;
+  display:grid;place-items:center;
+  background:var(--navy);color:#fff;
+  font-weight:900;margin-bottom:15px
+}
+.payment-card p{color:var(--muted);margin-bottom:0}
+.payment-note{
+  margin-top:18px;
+  padding:16px 18px;
+  border-left:4px solid var(--blue);
+  border-radius:12px;
+  background:#fff;
+  color:#526779;
+}
+
+/* FAQ */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:19px 0}
+.faq summary{cursor:pointer;color:var(--navy);font-weight:800}
+.faq p{margin:10px 0 0;color:var(--muted);max-width:820px}
+
+/* Contact */
+.contact{
+  background:linear-gradient(135deg,#F8FBFE,#EEF5FB);
+}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:start}
+.contact-data{display:grid;gap:8px;margin-top:20px}
+.contact-data a{color:var(--navy);font-weight:800}
+.contact-form{
+  background:#fff;
+  border:1px solid #DCE7F0;
+  border-radius:24px;
+  padding:27px;
+  box-shadow:var(--shadow);
+}
+.contact-form label{
+  display:block;
+  font-weight:800;
+  color:#314A60;
+  margin-bottom:16px;
+}
+input,select,textarea{
+  width:100%;
+  margin-top:7px;
+  padding:13px 14px;
+  border:1px solid #C7D7E4;
+  border-radius:12px;
+  background:#fff;
+  color:var(--ink);
+}
+textarea{resize:vertical}
+.consent{
+  display:flex!important;
+  gap:10px;
+  align-items:flex-start;
+  font-weight:500!important;
+}
+.consent input{width:auto;margin-top:4px}
+.consent span{color:#5D7182;font-size:.9rem}
+.contact-form small{display:block;margin-top:11px;color:#748695}
+
+/* Mobile CTA */
+.mobile-cta{
+  display:none;
+  position:fixed;
+  left:12px;right:12px;bottom:12px;
+  z-index:70;
+  background:rgba(255,255,255,.97);
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(11,46,85,.18);
+  padding:9px;
+}
+.mobile-cta a{width:100%}
+
+/* Footer */
+.footer{background:#081E35;color:#C8D8E5;padding:42px 0 90px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:34px}
+.footer-brand{display:flex;gap:15px;align-items:center}
+.footer-brand img{width:78px;filter:brightness(0) invert(1)}
+.footer strong{display:block;color:#fff;margin-bottom:10px}
+.footer a{display:block;margin:6px 0;color:#C8D8E5}
+.legal{
+  border-top:1px solid rgba(255,255,255,.11);
+  margin-top:28px;padding-top:18px;
+  display:flex;justify-content:space-between;gap:20px;
+  font-size:.8rem;color:#91A8BA
+}
+
+/* Instagram mobile-first tuning */
+@media(max-width:900px){
+  .menu-btn{display:block}
+  .nav{
+    display:none;
+    position:absolute;
+    top:72px;left:0;right:0;
+    background:#fff;
+    padding:18px 4%;
+    flex-direction:column;
+    align-items:stretch;
+    border-bottom:1px solid var(--line);
+    box-shadow:0 12px 25px rgba(11,46,85,.08);
+  }
+  .nav.open{display:flex}
+  .hero-grid,.two-col,.contact-grid{grid-template-columns:1fr;gap:34px}
+  .hero-card{min-height:300px;padding:30px}
+  .cards-3,.steps,.payment-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .legal{flex-direction:column}
+}
+@media(max-width:640px){
+  body{padding-bottom:76px}
+  .container{width:min(94%,560px)}
+  .site-header .brand img{width:50px;height:50px}
+  .nav-wrap{min-height:64px}
+  .nav{top:64px}
+  .hero{padding:46px 0 44px}
+  .hero-grid{gap:26px}
+  .hero-card{order:-1;min-height:auto;padding:18px 18px 22px;border-radius:24px}
+  .hero-card img{width:155px}
+  .pills{margin-top:10px}
+  .pills span{font-size:.76rem;padding:7px 9px}
+  h1{font-size:2.48rem}
+  .hero-sub{font-size:1.08rem}
+  .hero-text{font-size:.96rem}
+  .hero-actions{flex-direction:column}
+  .hero-actions .btn{width:100%}
+  .hero-trust{gap:7px;flex-direction:column;font-size:.85rem}
+  .section{padding:56px 0}
+  .section-head{margin-bottom:26px}
+  .service-card{padding:23px}
+  .step{padding-top:18px}
+  .contact-form{padding:21px}
+  .mobile-cta{display:block}
+  .footer{padding-bottom:100px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <img src="logo-vp.png" alt="Vanessa Puetate">
+    </a>
+    <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Menú principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#pagos">Pagos</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="nav-cta" href="#contacto">Déjame tu consulta</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">ABOGADA · T.P. 389007 C.S.J.</p>
+      <h1>Vanessa Puetate</h1>
+      <p class="hero-sub">Orientación jurídica clara para entender tu situación y definir el siguiente paso.</p>
+      <p class="hero-text">Derecho de familia, civil y laboral. También contratos, conciliación, derechos de petición y acciones de tutela.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contacto">Déjame tu consulta</a>
+        <a class="btn btn-secondary" href="https://wa.me/573184245844?text=Hola%20Vanessa,%20quisiera%20hacer%20una%20consulta%20jur%C3%ADdica." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+      <div class="hero-trust">
+        <span>Atención jurídica en línea</span>
+        <span>Consultas desde cualquier lugar</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="logo-vp.png" alt="Logo VP de Vanessa Puetate">
+      <div class="pills">
+        <span>Familia</span>
+        <span>Civil</span>
+        <span>Laboral</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" class="section section-soft">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">SERVICIOS</p>
+      <h2>¿En qué te puedo orientar?</h2>
+      <p>Si no sabes qué área corresponde a tu situación, cuéntame el caso y lo revisamos.</p>
+    </div>
+
+    <div class="cards-3">
+      <article class="service-card featured">
+        <span class="card-number">01</span>
+        <h3>Derecho de Familia</h3>
+        <ul>
+          <li>Cuota de alimentos</li>
+          <li>Custodia y visitas</li>
+          <li>Divorcios y separaciones</li>
+          <li>Conciliación familiar</li>
+          <li>Unión marital y asuntos patrimoniales</li>
+        </ul>
+      </article>
+
+      <article class="service-card">
+        <span class="card-number">02</span>
+        <h3>Derecho Civil</h3>
+        <ul>
+          <li>Contratos</li>
+          <li>Arrendamientos</li>
+          <li>Incumplimientos</li>
+          <li>Obligaciones y cobro</li>
+          <li>Conciliación</li>
+        </ul>
+      </article>
+
+      <article class="service-card">
+        <span class="card-number">03</span>
+        <h3>Derecho Laboral</h3>
+        <ul>
+          <li>Contratos laborales</li>
+          <li>Terminación del vínculo</li>
+          <li>Liquidaciones</li>
+          <li>Reclamaciones</li>
+          <li>Revisión documental</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="service-strip">
+      <span>Derechos de petición</span>
+      <span>Acciones de tutela</span>
+      <span>Conceptos jurídicos</span>
+      <span>Redacción jurídica</span>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona" class="section section-dark">
+  <div class="container">
+    <div class="section-head light">
+      <p class="eyebrow">CÓMO FUNCIONA</p>
+      <h2>Un proceso simple desde el primer contacto</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><strong>1</strong><h3>Cuéntame tu caso</h3><p>Describe brevemente qué sucede.</p></div>
+      <div class="step"><strong>2</strong><h3>Reviso tu solicitud</h3><p>Identifico el tipo de orientación que necesitas.</p></div>
+      <div class="step"><strong>3</strong><h3>Me comunico contigo</h3><p>Amplío la información y te explico el siguiente paso.</p></div>
+      <div class="step"><strong>4</strong><h3>Definimos la atención</h3><p>Acordamos modalidad, alcance y condiciones del servicio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pagos" class="section section-soft">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">MEDIOS DE PAGO</p>
+      <h2>Opciones disponibles</h2>
+      <p>Los datos específicos se comparten directamente después de confirmar el servicio.</p>
+    </div>
+
+    <div class="payment-grid">
+      <article class="payment-card">
+        <div class="pay-badge">B</div>
+        <h3>Bancolombia</h3>
+        <p>Transferencia a la cuenta informada al confirmar el servicio.</p>
+      </article>
+      <article class="payment-card">
+        <div class="pay-badge">N</div>
+        <h3>Nequi</h3>
+        <p>Pago al número habilitado para recibir el valor acordado.</p>
+      </article>
+      <article class="payment-card">
+        <div class="pay-badge">LL</div>
+        <h3>Llave Bre-B</h3>
+        <p>Transferencia mediante la llave suministrada después de confirmar el servicio.</p>
+      </article>
+    </div>
+
+    <div class="payment-note">
+      No se publican números de cuenta, teléfonos de pago ni llaves en el sitio.
+    </div>
+  </div>
+</section>
+
+<section id="preguntas" class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">PREGUNTAS FRECUENTES</p>
+      <h2>Antes de escribirme</h2>
+    </div>
+    <div class="faq">
+      <details><summary>¿Cómo se realiza la atención?</summary><p>La orientación se realiza en línea, de forma clara y coordinada según la consulta.</p></details>
+      <details><summary>¿Debo saber qué tipo de servicio necesito?</summary><p>No. Puedes contar tu situación en tus propias palabras y se identifica el tipo de orientación después de revisarla.</p></details>
+      <details><summary>¿Qué debo enviar inicialmente?</summary><p>Tu nombre, número de contacto y una descripción breve. No es necesario enviar todos los documentos en el primer mensaje.</p></details>
+      <details><summary>¿Puedo consultar desde cualquier lugar?</summary><p>Sí. Puedes realizar tu consulta desde cualquier ciudad o ubicación.</p></details>
+      <details><summary>¿La consulta implica representación judicial?</summary><p>No necesariamente. La orientación inicial y una eventual representación son servicios distintos.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="section contact">
+  <div class="container contact-grid">
+    <div>
+      <p class="eyebrow">CONTACTO</p>
+      <h2>Déjame tu consulta</h2>
+      <p>Completa estos datos. El formulario prepara un mensaje para WhatsApp y permite iniciar el contacto.</p>
+      <div class="contact-data">
+        <a href="tel:+573184245844">+57 318 424 5844</a>
+        <a href="mailto:vanessae.puetateo@gmail.com">vanessae.puetateo@gmail.com</a>
+        <span>Atención jurídica en línea</span>
+      </div>
+    </div>
+
+    <form id="whatsappForm" class="contact-form">
+      <label>Nombre
+        <input id="nombre" type="text" required placeholder="Tu nombre">
+      </label>
+
+      <label>Celular
+        <input id="telefono" type="tel" required placeholder="Tu número de contacto">
+      </label>
+
+      <label>Área de consulta
+        <select id="area" required>
+          <option value="">Selecciona una opción</option>
+          <option>Derecho de Familia</option>
+          <option>Derecho Civil</option>
+          <option>Derecho Laboral</option>
+          <option>Contratos</option>
+          <option>Derecho de petición / tutela</option>
+          <option>No estoy seguro</option>
+          <option>Otra consulta jurídica</option>
+        </select>
+      </label>
+
+      <label>Cuéntame brevemente tu situación
+        <textarea id="mensaje" rows="5" required placeholder="Describe qué sucede"></textarea>
+      </label>
+
+      <label class="consent">
+        <input type="checkbox" required>
+        <span>Acepto el uso de mis datos para responder esta solicitud.</span>
+      </label>
+
+      <button class="btn btn-primary full" type="submit">Enviar consulta por WhatsApp</button>
+      <small>No incluyas contraseñas, información financiera ni documentos completos en este primer mensaje.</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<div class="mobile-cta">
+  <a class="btn btn-primary" href="#contacto">Déjame tu consulta</a>
+</div>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="logo-vp.png" alt="VP">
+      <p>Vanessa Estefania Puetate Ordoñez<br>Abogada · T.P. 389007 C.S.J.</p>
+    </div>
+    <div>
+      <strong>Servicios</strong>
+      <a href="#servicios">Derecho de Familia</a>
+      <a href="#servicios">Derecho Civil</a>
+      <a href="#servicios">Derecho Laboral</a>
+    </div>
+    <div>
+      <strong>Contacto</strong>
+      <a href="tel:+573184245844">318 424 5844</a>
+      <a href="mailto:vanessae.puetateo@gmail.com">Correo electrónico</a>
+    </div>
+  </div>
+  <div class="container legal">
+    <span>© <span id="year"></span> Vanessa Puetate.</span>
+    <span>La información del sitio es general y no sustituye una asesoría jurídica individual.</span>
+  </div>
+</footer>
+
+<script>
+const menuBtn=document.querySelector('.menu-btn');
+const nav=document.querySelector('.nav');
+menuBtn?.addEventListener('click',()=>{
+  const open=nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',String(open));
+});
+document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{
+  nav.classList.remove('open');
+  menuBtn?.setAttribute('aria-expanded','false');
+}));
+document.getElementById('year').textContent=new Date().getFullYear();
+
+document.getElementById('whatsappForm')?.addEventListener('submit',e=>{
+  e.preventDefault();
+  const nombre=document.getElementById('nombre').value.trim();
+  const telefono=document.getElementById('telefono').value.trim();
+  const area=document.getElementById('area').value;
+  const mensaje=document.getElementById('mensaje').value.trim();
+
+  const texto=`Hola Vanessa, quisiera dejar una consulta jurídica.
+
+Nombre: ${nombre}
+Teléfono: ${telefono}
+Área de consulta: ${area}
+
+Descripción:
+${mensaje}
+
+Quedo atento(a) a su contacto.`;
+
+  window.open('https://wa.me/573184245844?text='+encodeURIComponent(texto),'_blank');
+});
+</script>
+</body>
+</html>
