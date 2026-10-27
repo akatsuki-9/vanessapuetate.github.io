@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://akatsuki-9.github.io/vanessapuetate.github.io/sitemap.xml
+Sitemap: https://vanessapuetate.com/sitemap.xml
