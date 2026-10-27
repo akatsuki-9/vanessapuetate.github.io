@@ -1,0 +1,43 @@
+backend:
+  name: turbo-github
+  turbo_site_id: REEMPLAZAR_CON_SITE_ID
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - label: "Actualidad jurídica"
+    name: "actualidad"
+    files:
+      - label: "Publicaciones"
+        name: "publicaciones"
+        file: "data/actualidad.json"
+        format: "json"
+        fields:
+          - label: "Publicaciones"
+            name: "publicaciones"
+            widget: "list"
+            add_to_top: true
+            collapsed: true
+            summary: "{{fields.fecha}} · {{fields.titulo}}"
+            label_singular: "Nueva publicación"
+            fields:
+              - {label: "ID", name: "id", widget: "uuid", prefix: "pub-", use_b32_encoding: true}
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Fecha", name: "fecha", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false, format: "YYYY-MM-DD"}
+              - label: "Categoría"
+                name: "categoria"
+                widget: "select"
+                options:
+                  - "Familia"
+                  - "Civil"
+                  - "Laboral"
+                  - "Contratos"
+                  - "Tutelas y derechos de petición"
+                  - "General"
+              - {label: "Resumen", name: "resumen", widget: "text"}
+              - {label: "Contenido", name: "contenido", widget: "text"}
+              - {label: "Imagen", name: "imagen", widget: "image", required: false}
+              - {label: "Fuente o enlace", name: "fuente", widget: "string", required: false}
+              - {label: "Publicado", name: "publicado", widget: "boolean", default: true}
