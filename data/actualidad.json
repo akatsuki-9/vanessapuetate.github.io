@@ -1,3 +1,13 @@
 {
-  "publicaciones": []
+  "publicaciones": [
+    {
+      "publicado": true,
+      "id": "pub-zqsihp3ecjdylda2h6bpeyvn6i",
+      "titulo": "Prueba de publicación",
+      "fecha": "2026-10-27",
+      "categoria": "General",
+      "resumen": "Esta es una publicación de prueba para verificar el funcionamiento de la sección de Actualidad Jurídica.",
+      "contenido": "Publicación de prueba realizada desde el panel de administración de Vanessa Puetate. Una vez verificado el funcionamiento, este contenido podrá eliminarse o reemplazarse por una actualización jurídica real."
+    }
+  ]
 }
