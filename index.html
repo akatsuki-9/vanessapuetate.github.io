@@ -201,37 +201,152 @@ p{margin-top:0}
 .prose{color:#526779;font-size:1.03rem}
 
 /* Services */
-.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cards-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+/* Tarjetas principales */
 .service-card{
-  background:#fff;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(180deg,#fff 0%,#FFFEFB 100%);
   border:1px solid rgba(199,154,59,.62);
   border-radius:var(--radius);
-  padding:27px;
+  padding:29px 27px;
   box-shadow:0 10px 28px rgba(11,46,85,.055);
-  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  transition:
+    transform .28s cubic-bezier(.2,.7,.2,1),
+    box-shadow .28s ease,
+    border-color .28s ease,
+    background .28s ease;
+}
+.service-card::before{
+  content:"";
+  position:absolute;
+  left:22px;
+  right:22px;
+  top:0;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  opacity:.35;
+  transition:opacity .28s ease;
 }
 .service-card.featured{
   border-color:rgba(199,154,59,.62);
   box-shadow:0 10px 28px rgba(11,46,85,.055);
 }
-.service-card:hover{
-  transform:translateY(-3px);
-  border-color:var(--gold);
-  box-shadow:0 16px 34px rgba(11,46,85,.10);
+.service-card h3{
+  margin-top:0;
+  transition:color .25s ease, transform .25s ease;
 }
-.service-card h3{margin-top:0}
-.service-card ul{padding-left:18px;color:#526779;margin-bottom:0}
+.service-card ul{
+  padding-left:18px;
+  color:#526779;
+  margin-bottom:0;
+}
 .service-card li{margin:7px 0}
 .card-number{display:none}
-.service-strip{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+
+/* Servicios secundarios: cuatro tarjetas uniformes */
+.service-strip{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-top:18px;
+}
 .service-strip span{
-  border:1px solid rgba(199,154,59,.55);
-  background:#fff;
+  position:relative;
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:14px 16px;
+  background:linear-gradient(180deg,#fff 0%,#FFFEFB 100%);
   color:var(--navy);
+  border:1px solid rgba(199,154,59,.60);
+  border-radius:16px;
+  font-size:.9rem;
+  font-weight:750;
+  line-height:1.25;
+  box-shadow:0 7px 20px rgba(11,46,85,.04);
+  transition:
+    transform .25s cubic-bezier(.2,.7,.2,1),
+    box-shadow .25s ease,
+    border-color .25s ease,
+    background .25s ease,
+    color .25s ease;
+}
+.service-strip span::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:20%;
+  right:20%;
+  height:2px;
   border-radius:999px;
-  padding:9px 12px;
-  font-size:.86rem;
-  box-shadow:0 5px 14px rgba(11,46,85,.035);
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  opacity:.45;
+  transition:opacity .25s ease,left .25s ease,right .25s ease;
+}
+
+/* Elegancia en desktop */
+@media (hover:hover) and (pointer:fine){
+  .service-card:hover{
+    transform:translateY(-7px);
+    border-color:var(--gold);
+    background:#fff;
+    box-shadow:
+      0 22px 46px rgba(11,46,85,.11),
+      0 0 0 1px rgba(199,154,59,.10);
+  }
+  .service-card:hover::before{opacity:1}
+  .service-card:hover h3{
+    color:var(--gold-deep);
+    transform:translateY(-1px);
+  }
+
+  .service-strip span:hover{
+    transform:translateY(-5px);
+    border-color:var(--gold);
+    background:linear-gradient(180deg,#fff 0%,#FCF7EC 100%);
+    color:var(--gold-deep);
+    box-shadow:
+      0 16px 30px rgba(11,46,85,.09),
+      0 0 0 1px rgba(199,154,59,.08);
+  }
+  .service-strip span:hover::after{
+    opacity:1;
+    left:10%;
+    right:10%;
+  }
+}
+
+/* Respuesta táctil */
+.service-card:active,
+.service-strip span:active{
+  transform:scale(.985);
+  border-color:var(--gold);
+}
+
+/* Accesibilidad: movimiento reducido */
+@media (prefers-reduced-motion:reduce){
+  .service-card,
+  .service-card h3,
+  .service-strip span{
+    transition:none;
+  }
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .service-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:520px){
+  .service-strip{grid-template-columns:1fr}
+  .service-strip span{min-height:58px}
 }
 
 /* Process */
