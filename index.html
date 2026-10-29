@@ -11,6 +11,9 @@
   --navy:#0B2E55;
   --navy2:#173F6E;
   --blue:#2F6FA8;
+  --gold:#C79A3B;
+  --gold-deep:#9B6B1D;
+  --gold-soft:#F7EEDC;
   --ice:#F2F7FB;
   --line:#D9E5EF;
   --ink:#1E2A36;
@@ -35,7 +38,7 @@ button,input,select,textarea{font:inherit}
 .container{width:min(1120px,92%);margin:auto}
 .eyebrow{
   margin:0 0 10px;
-  color:var(--blue);
+  color:var(--gold-deep);
   font-size:.75rem;
   font-weight:800;
   letter-spacing:.16em;
@@ -82,7 +85,7 @@ p{margin-top:0}
   justify-content:space-between;
   gap:16px;
 }
-.brand img{width:58px;height:58px;object-fit:contain}
+.brand img{width:62px;height:62px;object-fit:contain}
 .nav{
   display:flex;
   align-items:center;
@@ -150,7 +153,7 @@ p{margin-top:0}
   position:relative;
   z-index:2;
   background:#fff;
-  border:1px solid #E2ECF4;
+  border:1px solid rgba(199,154,59,.34);
   border-radius:30px;
   box-shadow:var(--shadow);
   padding:38px 34px;
@@ -160,7 +163,7 @@ p{margin-top:0}
   justify-content:center;
   min-height:390px;
 }
-.hero-card img{width:250px}
+.hero-card img{width:min(330px,88%)}
 .pills{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:18px}
 .pills span{
   background:var(--ice);
@@ -169,6 +172,14 @@ p{margin-top:0}
   border-radius:999px;
   font-size:.82rem;
   font-weight:700;
+}
+
+
+.hero-card:before{
+  content:"";
+  width:72px;height:3px;border-radius:999px;
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold));
+  margin-bottom:20px;
 }
 
 /* General sections */
@@ -189,7 +200,7 @@ p{margin-top:0}
   padding:27px;
   box-shadow:0 10px 28px rgba(11,46,85,.055);
 }
-.service-card.featured{border-color:#AFC7DB;box-shadow:0 16px 38px rgba(11,46,85,.09)}
+.service-card.featured{border-color:rgba(199,154,59,.62);box-shadow:0 16px 38px rgba(11,46,85,.09)}
 .service-card ul{padding-left:18px;color:#526779;margin-bottom:0}
 .service-card li{margin:7px 0}
 .card-number{display:inline-block;margin-bottom:12px;color:#8DA9C0;font-size:.76rem;font-weight:900;letter-spacing:.12em}
@@ -298,7 +309,7 @@ textarea{resize:vertical}
 .footer{background:#081E35;color:#C8D8E5;padding:42px 0 90px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:34px}
 .footer-brand{display:flex;gap:15px;align-items:center}
-.footer-brand img{width:78px;filter:brightness(0) invert(1)}
+.footer-brand img{width:82px;background:#fff;border-radius:18px;padding:7px;box-shadow:0 0 0 1px rgba(199,154,59,.38)}
 .footer strong{display:block;color:#fff;margin-bottom:10px}
 .footer a{display:block;margin:6px 0;color:#C8D8E5}
 .legal{
@@ -332,13 +343,13 @@ textarea{resize:vertical}
 @media(max-width:640px){
   body{padding-bottom:76px}
   .container{width:min(94%,560px)}
-  .site-header .brand img{width:50px;height:50px}
+  .site-header .brand img{width:54px;height:54px}
   .nav-wrap{min-height:64px}
   .nav{top:64px}
   .hero{padding:46px 0 44px}
   .hero-grid{gap:26px}
   .hero-card{order:-1;min-height:auto;padding:18px 18px 22px;border-radius:24px}
-  .hero-card img{width:155px}
+  .hero-card img{width:min(245px,82%)}
   .pills{margin-top:10px}
   .pills span{font-size:.76rem;padding:7px 9px}
   h1{font-size:2.48rem}
@@ -455,7 +466,7 @@ textarea{resize:vertical}
       </div>
     </div>
     <div class="hero-card">
-      <img src="logo-vp.png" alt="Logo VP de Vanessa Puetate">
+      <img src="logo-vp-completo.png" alt="Vanessa Puetate Abogada">
       <div class="pills">
         <span>Familia</span>
         <span>Civil</span>
