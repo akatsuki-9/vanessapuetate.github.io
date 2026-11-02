@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0B2E55">
 <meta name="description" content="Orientación jurídica en línea con Vanessa Puetate, abogada. Derecho de familia, civil y laboral, contratos, conciliación, derechos de petición y acciones de tutela.">
+<meta name="application-name" content="Vanessa Puetate">
+<meta name="apple-mobile-web-app-title" content="Vanessa Puetate">
 <title>Vanessa Puetate | Abogada en Derecho Civil, Laboral y de Familia</title>
 <style>
 :root{
@@ -310,7 +312,8 @@ p{margin-top:0}
 }
 
 /* Process */
-.light .eyebrow,.light h2{color:#fff}
+.light .eyebrow{color:var(--gold-deep)}
+.light h2{color:#fff}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .step{border-top:1px solid rgba(199,154,59,.58);padding-top:22px}
 .step strong{
@@ -606,6 +609,7 @@ input:focus,select:focus,textarea:focus{
 <link rel="apple-touch-icon" href="favicon-192.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Vanessa Puetate">
 <meta property="og:title" content="Vanessa Puetate | Abogada en Derecho Civil, Laboral y de Familia">
 <meta property="og:description" content="Orientación jurídica en línea con Vanessa Puetate, abogada. Derecho de familia, civil y laboral, contratos, conciliación, derechos de petición y acciones de tutela.">
 <meta property="og:url" content="https://vanessapuetate.com/">
@@ -617,7 +621,46 @@ input:focus,select:focus,textarea:focus{
 <meta name="twitter:description" content="Orientación jurídica en línea con Vanessa Puetate, abogada. Derecho de familia, civil y laboral, contratos, conciliación, derechos de petición y acciones de tutela.">
 <meta name="twitter:image" content="https://vanessapuetate.com/og-vanessa-puetate.png">
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "LegalService", "name": "Vanessa Puetate", "url": "https://vanessapuetate.com/", "description": "Orientación jurídica en línea con Vanessa Puetate, abogada. Derecho de familia, civil y laboral, contratos, conciliación, derechos de petición y acciones de tutela.", "telephone": "+57 302 241 9111", "email": "vanessae.puetateo@gmail.com", "areaServed": "Colombia", "serviceType": ["Derecho de Familia", "Derecho Civil", "Derecho Laboral", "Contratos", "Derechos de petición", "Acciones de tutela", "Conciliación"], "image": "https://vanessapuetate.com/og-vanessa-puetate.png"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://vanessapuetate.com/#website",
+      "url": "https://vanessapuetate.com/",
+      "name": "Vanessa Puetate",
+      "alternateName": "Vanessa Puetate Abogada",
+      "inLanguage": "es-CO"
+    },
+    {
+      "@type": "LegalService",
+      "@id": "https://vanessapuetate.com/#legalservice",
+      "name": "Vanessa Puetate",
+      "alternateName": "Vanessa Puetate Abogada",
+      "url": "https://vanessapuetate.com/",
+      "description": "Orientación jurídica en línea con Vanessa Puetate, abogada. Derecho de familia, civil y laboral, contratos, conciliación, derechos de petición y acciones de tutela.",
+      "telephone": "+57 302 241 9111",
+      "email": "vanessae.puetateo@gmail.com",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Colombia"
+      },
+      "serviceType": [
+        "Derecho de Familia",
+        "Derecho Civil",
+        "Derecho Laboral",
+        "Protección de derechos y documentos",
+        "Contratos",
+        "Derechos de petición",
+        "Acciones de tutela",
+        "Conciliación",
+        "Conceptos jurídicos",
+        "Redacción jurídica"
+      ],
+      "image": "https://vanessapuetate.com/og-vanessa-puetate.png"
+    }
+  ]
+}
 </script>
 
 
