@@ -748,6 +748,34 @@ input:focus,select:focus,textarea:focus{
   box-shadow:0 3px 15px rgba(0,0,0,.07);
 }
 
+  /* Servicio de tránsito | Vanessa Puetate */
+.vp-transito {padding: 14px 0 76px; background: #f5f9fc; color:#1e2a36;}
+.vp-transito * {box-sizing:border-box;}
+.vp-transito .vp-transito-inner {width:min(1120px,92%);margin:0 auto;}
+.vp-transito-card {display:grid;grid-template-columns:1fr .95fr;gap:34px;align-items:stretch;padding:34px;border:1px solid rgba(199,154,59,.56);border-radius:26px;background:linear-gradient(112deg,#fff,#fffefa 67%,#fff8ed);box-shadow:0 14px 36px rgba(11,46,85,.065);}
+.vp-transito-eyebrow {margin:0 0 12px;color:#9b6b1d;font-size:.76rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase;}
+.vp-transito h2 {font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.8rem,3.5vw,2.55rem);line-height:1.12;color:#0b2e55;margin:0 0 17px;letter-spacing:-.015em;}
+.vp-transito-lead {font-size:1.06rem;color:#3d5369;font-weight:700;margin:0 0 15px;}
+.vp-transito-text {margin:0;color:#526779;font-size:.97rem;line-height:1.65;}
+.vp-transito-tags {display:flex;gap:8px;flex-wrap:wrap;margin:23px 0 26px;}
+.vp-transito-tags span {border:1px solid rgba(199,154,59,.53);background:#fff8eb;color:#7c5417;border-radius:999px;font-size:.82rem;font-weight:750;padding:8px 12px;}
+.vp-transito-actions {display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.vp-transito-button {display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 22px;text-align:center;border-radius:999px;background:#0b2e55;color:#fff!important;font-size:.93rem;font-weight:850;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s;}
+.vp-transito-button:hover {background:#173f6e;transform:translateY(-2px);box-shadow:0 9px 18px rgba(11,46,85,.14);}
+.vp-transito-panel {background:#0b2e55;color:#f7fafc;padding:27px 28px;border:1px solid rgba(199,154,59,.79);border-radius:21px;}
+.vp-transito-panel h3 {font-family:Georgia,'Times New Roman',serif;color:#fff;font-size:1.35rem;margin:0 0 16px;}
+.vp-transito-panel ul {list-style:none;padding:0;margin:0;display:grid;gap:12px;}
+.vp-transito-panel .vp-transito-check {display:flex;gap:11px;align-items:flex-start;line-height:1.45;color:#dce9f3;font-size:.93rem;}
+.vp-transito-check::before {content:'✓';flex:none;display:grid;place-items:center;width:23px;height:23px;border-radius:50%;background:#c79a3b;color:#0b2e55;font-weight:900;font-size:.84rem;}
+.vp-transito-details {margin-top:21px;padding-top:19px;border-top:1px solid rgba(255,255,255,.19);}
+.vp-transito-details summary {cursor:pointer;color:#f0d89f;font-weight:800;line-height:1.35;}
+.vp-transito-details summary:focus-visible {outline:2px solid #f0d89f;outline-offset:5px;}
+.vp-transito-details ol {padding-left:22px;margin:18px 0 0;display:grid;gap:9px;color:#e5edf4;font-size:.89rem;line-height:1.5;}
+.vp-transito-footnote {margin:19px 0 0;max-width:1000px;font-size:.82rem;line-height:1.5;color:#607387;}
+@media (max-width:840px){.vp-transito-card{grid-template-columns:1fr;gap:26px;}.vp-transito{padding-bottom:58px;}}
+@media (max-width:600px){.vp-transito .vp-transito-inner{width:94%}.vp-transito-card{padding:23px 19px;border-radius:20px}.vp-transito-panel{padding:22px 19px}.vp-transito-actions{align-items:stretch;flex-direction:column}.vp-transito-button{width:100%}}
+@media (prefers-reduced-motion:reduce){.vp-transito-button{transition:none}}
+  
 </style>
 
 <link rel="canonical" href="https://vanessapuetate.com/">
@@ -867,6 +895,7 @@ input:focus,select:focus,textarea:focus{
       </div>
     </div>
   </div>
+
 </section>
 
 <section id="servicios" class="section section-soft">
@@ -925,7 +954,51 @@ input:focus,select:focus,textarea:focus{
   </div>
 </section>
 
-
+<!-- INICIO: Servicio especializado de tránsito -->
+<section id="servicio-transito" class="vp-transito" aria-labelledby="vp-transito-title">
+  <div class="vp-transito-inner">
+    <div class="vp-transito-card">
+      <div class="vp-transito-copy">
+        <p class="vp-transito-eyebrow">SERVICIO JURÍDICO ESPECIALIZADO</p>
+        <h2 id="vp-transito-title">Estudio y solicitud de prescripción de multas de tránsito</h2>
+        <p class="vp-transito-lead">¿Tienes multas antiguas y necesitas saber si procede solicitar su prescripción?</p>
+        <p class="vp-transito-text">Analizamos la información del expediente, las fechas de las actuaciones y las notificaciones para determinar si existe fundamento jurídico para solicitar la declaración de prescripción ante la autoridad de tránsito competente.</p>
+        <div class="vp-transito-tags" aria-label="Componentes del servicio">
+          <span>Estudio del caso</span>
+          <span>Solicitud jurídica</span>
+          <span>Seguimiento</span>
+        </div>
+        <div class="vp-transito-actions">
+          <a class="vp-transito-button" href="https://wa.me/573022419111?text=Hola%20Vanessa%2C%20quisiera%20consultar%20sobre%20un%20estudio%20de%20prescripci%C3%B3n%20de%20multas%20de%20tr%C3%A1nsito." target="_blank" rel="noopener noreferrer">Solicitar estudio de mi caso</a>
+        </div>
+      </div>
+      <div class="vp-transito-panel">
+        <h3>¿Qué revisamos?</h3>
+        <ul>
+          <li class="vp-transito-check">Estado de las multas en SIMIT y ante el organismo de tránsito.</li>
+          <li class="vp-transito-check">Fechas del hecho, decisiones y actuaciones de cobro.</li>
+          <li class="vp-transito-check">Mandamientos de pago y constancias de notificación.</li>
+          <li class="vp-transito-check">Viabilidad jurídica de solicitar la prescripción.</li>
+        </ul>
+        <details class="vp-transito-details">
+          <summary>Conoce las siete etapas del servicio</summary>
+          <ol>
+            <li>Consulta del estado de las multas en SIMIT y en el organismo de tránsito.</li>
+            <li>Estudio de las fechas de los comparendos y de las actuaciones del expediente.</li>
+            <li>Revisión de mandamientos de pago, notificaciones y otros actos relevantes.</li>
+            <li>Análisis jurídico de los términos de prescripción aplicables al caso.</li>
+            <li>Elaboración del derecho de petición o de la solicitud jurídica pertinente, cuando proceda.</li>
+            <li>Solicitud de declaración de prescripción y actualización del estado de los registros, si corresponde.</li>
+            <li>Seguimiento a la respuesta de la autoridad y orientación sobre el siguiente paso.</li>
+          </ol>
+        </details>
+      </div>
+    </div>
+    <p class="vp-transito-footnote">La prescripción no se determina por la antigüedad de la multa de manera aislada. Su procedencia depende de las actuaciones y notificaciones del expediente. El estudio y la solicitud no garantizan una decisión favorable de la autoridad competente.</p>
+  </div>
+</section>
+<!-- FIN: Servicio especializado de tránsito -->
+  
 <section id="conoce-vanessa" class="section about-section">
   <div class="container">
     <div class="about-grid">
